@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento | Gestão de Atendimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registro de Atendimentos</h1>
+            <nav>
+                <a href="index.html">Cadastro</a>
+                <a href="atendimento.html" class="active">Atendimento</a>
+                <a href="listagem.html">Listagem</a>
+                <a href="historico.html">Histórico</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="form-section">
+                <h2>Registrar Novo Atendimento</h2>
+                <form id="formAtendimento">
+                    <div class="form-row">
+                        <label for="cidadao">Cidadão</label>
+                        <select id="cidadao" required>
+                            <option value="">Carregando cidadãos...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="profissional">Profissional</label>
+                        <select id="profissional" required>
+                            <option value="">Carregando profissionais...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="data">Data e Hora</label>
+                            <input type="datetime-local" id="data" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="tipo">Tipo de Atendimento</label>
+                            <select id="tipo" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="VISITA_DOMICILIAR">Visita Domiciliar</option>
+                                <option value="CONSULTA">Consulta</option>
+                                <option value="ENCAMINHAMENTO">Encaminhamento</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="descricao">Descrição do Atendimento</label>
+                        <textarea id="descricao" placeholder="Descreva detalhes do atendimento..." required></textarea>
+                    </div>
+                    
+                    <button type="submit">Registrar Atendimento</button>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Sistema de Gestão de Atendimentos de Saúde</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

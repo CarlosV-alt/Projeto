@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico | Gestão de Atendimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Histórico de Atendimentos</h1>
+            <nav>
+                <a href="index.html">Cadastro</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="listagem.html">Listagem</a>
+                <a href="historico.html" class="active">Histórico</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="filters">
+                <h2>Filtros</h2>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="filterDate">Data:</label>
+                        <input type="date" id="filterDate">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="filterType">Tipo:</label>
+                        <select id="filterType">
+                            <option value="">Todos</option>
+                            <option value="VISITA_DOMICILIAR">Visita Domiciliar</option>
+                            <option value="CONSULTA">Consulta</option>
+                            <option value="ENCAMINHAMENTO">Encaminhamento</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="filterProfessional">Profissional:</label>
+                        <select id="filterProfessional">
+                            <option value="">Todos</option>
+                        </select>
+                    </div>
+                    
+                    <button id="applyFilters">Aplicar Filtros</button>
+                </div>
+            </section>
+            
+            <section class="history">
+                <h2>Atendimentos Realizados</h2>
+                <div id="listaAtendimentos" class="atendimentos-container">
+                    <p>Carregando atendimentos...</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Sistema de Gestão de Atendimentos de Saúde</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Gestão de Atendimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestão de Atendimentos</h1>
+            <nav>
+                <a href="index.html" class="active">Cadastro</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="listagem.html">Listagem</a>
+                <a href="historico.html">Histórico</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="form-section">
+                <h2>Cadastrar Cidadão</h2>
+                <form id="formCidadao">
+                    <div class="form-row">
+                        <label for="nomeCidadao">Nome completo</label>
+                        <input type="text" id="nomeCidadao" placeholder="Nome completo" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="dataNascimento">Data de Nascimento</label>
+                            <input type="date" id="dataNascimento" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" required>
+                                <option value="">Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="O">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Salvar Cidadão</button>
+                </form>
+            </section>
+
+            <section class="form-section">
+                <h2>Cadastrar Profissional</h2>
+                <form id="formProfissional">
+                    <div class="form-row">
+                        <label for="nomeProfissional">Nome</label>
+                        <input type="text" id="nomeProfissional" placeholder="Nome do profissional" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label for="funcao">Função</label>
+                            <input type="text" id="funcao" placeholder="Ex: Médico, Enfermeiro" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label for="setor">Setor</label>
+                            <input type="text" id="setor" placeholder="Ex: UBS Centro" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Salvar Profissional</button>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Sistema de Gestão de Atendimentos de Saúde</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

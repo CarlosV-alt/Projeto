@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem | Gestão de Atendimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Listagem de Cadastros</h1>
+            <nav>
+                <a href="index.html">Cadastro</a>
+                <a href="atendimento.html">Atendimento</a>
+                <a href="listagem.html" class="active">Listagem</a>
+                <a href="historico.html">Histórico</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="listing-section">
+                <div class="section-header">
+                    <h2>Cidadãos Cadastrados</h2>
+                    <div class="search-box">
+                        <input type="text" id="searchCitizen" placeholder="Buscar cidadão...">
+                        <button id="searchCitizenBtn">Buscar</button>
+                    </div>
+                </div>                
+                <div class="table-container">
+                    <table id="citizensTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Data Nasc.</th>
+                                <th>Sexo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="loading">Carregando cidadãos...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <div class="table-info" id="citizenCount">0 cidadãos encontrados</div>
+                        <div class="pagination">
+                            <button id="prevCitizenPage" disabled>Anterior</button>
+                            <span id="citizenPageInfo">Página 1</span>
+                            <button id="nextCitizenPage" disabled>Próxima</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="listing-section">
+                <div class="section-header">
+                    <h2>Profissionais Cadastrados</h2>
+                    <div class="search-box">
+                        <input type="text" id="searchProfessional" placeholder="Buscar profissional...">
+                        <button id="searchProfessionalBtn">Buscar</button>
+                    </div>
+                </div>               
+                <div class="table-container">
+                    <table id="professionalsTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Função</th>
+                                <th>Setor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4" class="loading">Carregando profissionais...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-footer">
+                        <div class="table-info" id="professionalCount">0 profissionais encontrados</div>
+                        <div class="pagination">
+                            <button id="prevProfessionalPage" disabled>Anterior</button>
+                            <span id="professionalPageInfo">Página 1</span>
+                            <button id="nextProfessionalPage" disabled>Próxima</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Sistema de Gestão de Atendimentos de Saúde</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
